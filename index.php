@@ -30,8 +30,8 @@
                     <label for="genero" class="labelInput">Gênero</label>
                 </div><br><br>
                 <div class="inputBox">
-                    <input type="text" name="data_lancamento" class="inputUser" required>
-                    <label for="data_lancamento" class="labelInput">Data de lançamento</label>
+                    <label for="data_lancamento"><b>Data de lançamento:</b></label>
+                    <input type="date" name="data_lancamento" id="data_lancamento" required>
                 </div><br><br>
                 <div class="inputBox">
                     <input type="text" name="duracao" class="inputUser" required>
