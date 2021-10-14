@@ -50,9 +50,29 @@ legend{
 }
 .submit{
     background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
-    width: 100%;
+    width: 49%;
     border: none;
     padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#filme{
+    width: 70%;
+    border: 2px solid dodgerblue;
+    border-radius: 8px;
+    background: none;
+    padding: 4px;
+    color: black;
+    scrollbar-color: black;
+    scrollbar-arrow-color: black;
+}
+#consulta{
+    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+    width: 30%;
+    border: none;
+    padding: 5px;
     color: white;
     font-size: 15px;
     cursor: pointer;

@@ -2,16 +2,21 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Filme | FATECINE</title>
 </head>
 <body>
     <div class="box">
-        <form method="POST" action="cadastro_filme.php">
-            <fieldset>
-                <legend><b>FILME</b></legend><br>
+        <fieldset>
+            <legend><b>FILME</b></legend><br>
+            <select id="filme" name="filme">
+                <option value=""></option>
+                <option value="0">Action</option>
+                <option value="1">Drama</option>
+                <option value="2">Comedy</option>
+                <option value="3">Science</option>
+            </select><input type="submit" value="Consultar" id="consulta"><br><br><br>
+            <form method="POST" action="cadastro_filme.php">
                 <div class="inputBox">
                     <input type="text" name="titulo" class="inputUser" required>
                     <label for="titulo" class="labelInput">Título</label>
@@ -32,9 +37,10 @@
                     <input type="text" name="duracao" class="inputUser" required>
                     <label for="duracao" class="labelInput">Duração</label>
                 </div><br><br>
-                <input type="submit" class="submit" value="Criar">
-            </fieldset>
-        </form>
+                    <input type="submit" class="submit" value="Cadastrar">
+                    <input type="submit" class="submit" value="Alterar">
+            </form>
+        </fieldset>
     </div>
 </body>
 </html>
