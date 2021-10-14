@@ -1,0 +1,12 @@
+CREATE DATABASE fatecine;
+
+USE fatecine;
+
+CREATE TABLE filme(
+	idFilme int not null PRIMARY KEY AUTO_INCREMENT,
+    titulo varchar(200),
+    sinopse varchar(1000),
+    genero varchar(200),
+    data_lancamento date,
+    duracao varchar(100)
+);
