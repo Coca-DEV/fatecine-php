@@ -5,6 +5,6 @@
     $password = "";
     $host = "localhost";
 
-    //fazendo a conexão
+    //fazendo a conexão com o banco de dados
     $conn = mysqli_connect($host, $user, $password, $database);
 ?>

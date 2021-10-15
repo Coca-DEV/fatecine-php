@@ -25,7 +25,7 @@
     <div class="box">
         <fieldset>
             <legend><b>CADASTRO</b></legend><br>
-            <h1>Cadastro conluído</h1>
+            <h1 align='center'>Cadastro conluído</h1>
             <a href="index.php"><button class="botao">Voltar</button></a><br><br>
         </fieldset>
     </div>

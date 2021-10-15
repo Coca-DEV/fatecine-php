@@ -1,3 +1,9 @@
+<?php
+    include_once('conexao.php');
+
+    $busca = "Select * from fatecine order by id";
+    $todos = mysqli_query($conn, $busca);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,13 +15,28 @@
     <div class="box">
         <fieldset>
             <legend><b>FILME</b></legend><br>
-            <select id="filme" name="filme">
-                <option value=""></option>
-                <option value="0">Action</option>
-                <option value="1">Drama</option>
-                <option value="2">Comedy</option>
-                <option value="3">Science</option>
-            </select><input type="submit" value="Consultar" id="consulta"><br><br><br>
+            <?php header("Content-type: text/html; charset=utf-8");
+
+                include_once('conexao.php');
+                //mysqli_set_charset($strcon, 'utf8'); // Configurar a conexão para usar codificação UTF-8
+
+                $sql_lista_filmes = "select * from filme order by idFilme desc";
+                $resultado = mysqli_query($conn, $sql_lista_filmes);
+
+                if (mysqli_num_rows($resultado)!=0){
+                    echo '<form name="Combobox" action="processaLista.php id="combobox" method="POST">';
+                    echo '<select name="itens" id="itens">
+                    <option value=" " selected="selected">Escolha um filme:</option>';
+                    while($elemento = mysqli_fetch_array($resultado)){
+                        $nomeItem = $elemento['Item'];
+                        echo '<option value="'.$nomeItem.'">'.$nomeItem.'</option>';
+                    }
+                    echo '</select>';
+                    echo '<input type="submit" name="btnEnvia" class="submit" value="Consultar">';
+                    echo '</form>';
+                }
+            ?>
+            <br><br>
             <form method="POST" action="cadastro_filme.php">
                 <div class="inputBox">
                     <input type="text" name="titulo" class="inputUser" required>
