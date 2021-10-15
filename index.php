@@ -22,7 +22,7 @@
                     <label for="titulo" class="labelInput">Título</label>
                 </div><br><br>
                 <div class="inputBox">
-                    <input type="text" name="sinopse" class="inputUser" required>
+                    <textarea name="sinopse" class="inputUser" required></textarea>
                     <label for="sinopse" class="labelInput">Sinopse</label>
                 </div><br><br>
                 <div class="inputBox">
@@ -37,8 +37,8 @@
                     <input type="text" name="duracao" class="inputUser" required>
                     <label for="duracao" class="labelInput">Duração</label>
                 </div><br><br>
-                    <input type="submit" class="submit" value="Cadastrar">
-                    <input type="submit" class="submit" value="Alterar">
+                <input type="submit" class="submit" value="Cadastrar">
+                <input type="submit" class="submit" value="Alterar">
             </form>
         </fieldset>
     </div>
