@@ -18,19 +18,20 @@
             <?php header("Content-type: text/html; charset=utf-8");
 
                 include_once('conexao.php');
-                //mysqli_set_charset($strcon, 'utf8'); // Configurar a conexão para usar codificação UTF-8
 
                 $sql_lista_filmes = "select * from filme order by idFilme desc";
                 $resultado = mysqli_query($conn, $sql_lista_filmes);
 
                 if (mysqli_num_rows($resultado)!=0){
-                    echo '<form name="Combobox" action="processaLista.php id="combobox" method="POST">';
+                    echo '<form name="combobox" action="processaLista.php" id="combobox" method="POST">';
                     echo '<select name="itens" id="itens">
-                    <option value=" " selected="selected">Escolha um filme:</option>';
+                    <option value="" selected="selected">Escolha um filme</option>';
+
                     while($elemento = mysqli_fetch_array($resultado)){
-                        $nomeItem = $elemento['Item'];
-                        echo '<option value="'.$nomeItem.'">'.$nomeItem.'</option>';
+                        $nomeFilme = $elemento['titulo'];
+                        echo '<option value="'.$nomeFilme.'">'.$nomeFilme.'</option>';
                     }
+
                     echo '</select>';
                     echo '<input type="submit" name="btnEnvia" class="submit" value="Consultar">';
                     echo '</form>';

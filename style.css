@@ -12,6 +12,16 @@ legend{
     background-color: dodgerblue;
     border-radius: 8px;
 }
+button{
+    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
 .box{
     position: absolute;
     top: 50%;
@@ -82,19 +92,11 @@ legend{
     padding: 8px;
     border-radius: 10px;
     outline: none;
-    width: 45%;
-}
-button{
-    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
-    width: 100%;
-    border: none;
-    padding: 15px;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 10px;
+    width: 41%;
 }
 #combobox{
-    width: 49%;
-    border: none;
+    width: 100%;
+}
+option{
+    color: black;
 }
