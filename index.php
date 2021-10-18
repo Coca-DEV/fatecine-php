@@ -15,7 +15,7 @@
     <div class="box">
         <fieldset>
             <legend><b>FILME</b></legend><br>
-            <?php header("Content-type: text/html; charset=utf-8");
+            <?php
 
                 include_once('conexao.php');
 
