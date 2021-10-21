@@ -1,9 +1,3 @@
-<?php
-    include_once('conexao.php');
-
-    $busca = "Select * from fatecine order by id";
-    $todos = mysqli_query($conn, $busca);
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,15 +10,14 @@
         <fieldset>
             <legend><b>FILME</b></legend><br>
             <?php
-
                 include_once('conexao.php');
 
                 $sql_lista_filmes = "select * from filme order by idFilme desc";
                 $resultado = mysqli_query($conn, $sql_lista_filmes);
 
                 if (mysqli_num_rows($resultado)!=0){
-                    echo '<form name="combobox" action="processaLista.php" id="combobox" method="POST">';
-                    echo '<select name="itens" id="itens">
+                    echo '<form name="combobox" action="exibicao_filme.php" method="POST">';
+                    echo '<select name="listBox" id="listFilmes">
                     <option value="" selected="selected">Escolha um filme</option>';
 
                     while($elemento = mysqli_fetch_array($resultado)){
