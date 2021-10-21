@@ -26,7 +26,7 @@
         <fieldset>
             <legend><b>CADASTRO</b></legend><br>
             <h1 align='center'>Cadastro conluído</h1>
-            <a href="index.php"><button class="botao">Voltar</button></a><br><br>
+            <a href="index.php"><button class="btnGenerico">Voltar</button></a><br><br>
         </fieldset>
     </div>
 </body>
