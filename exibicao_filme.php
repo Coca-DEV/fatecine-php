@@ -1,28 +1,13 @@
 <?php
     include_once('conexao.php');
 
-     if($_SERVER['REQUEST_METHOD']=='GET') {
-        $idFilme = isset($_POST['idFilme']);
-        $titulo = isset($_POST['titulo']);
-        $sinopse = isset($_POST['sinopse']);
-        $genero = isset($_POST['genero']);
-        $dataLancamento = isset($_POST['dataLancamento']);
-        $duracao = isset($_POST['duracao']);
-
-        $sql_atualizar_cad = ("UPDATE filme SET titulo='$titulo', sinopse='$sinopse', genero='$genero', data_lancamento='$dataLancamento', 
-                            duracao='$duracao' WHERE id='$idFilme'");
-
-        $resultado_att = mysqli_query($conn, $sql_atualizar_cad);
-
-        $sql = "select * from filme where titulo='$titulo';";
-        $resultado = mysqli_query($conn, $sql);
-        $elemento = mysqli_fetch_array($resultado);
-    } else {
         $titulo = $_POST['listBox'];
+
         $sql = "select * from filme where titulo='$titulo';";
         $resultado = mysqli_query($conn, $sql);
         $elemento = mysqli_fetch_array($resultado);
-    } 
+
+        echo $elemento['idFilme'];;
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,8 +20,8 @@
     <div class="box">
         <fieldset>
             <legend><b>FILME</b></legend><br>
-            <form action="#" method="GET">
-                <input type="hidden" name="idFilme" value="<?php $elemento['idFilme'];?>">
+            <form action="atualizar_cadastro.php" method="POST">
+                <input type="hidden" name="idFilme" value="<?php echo $elemento['idFilme'];?>">
                 <div class="inputBox">
                     <input type="text" name="titulo" class="inputUser" value="<?php echo $elemento['titulo'];?>">
                     <label for="titulo" class="labelInput">Título</label>
