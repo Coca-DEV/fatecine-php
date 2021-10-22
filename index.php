@@ -46,7 +46,7 @@
                 </div><br><br>
                 <div class="inputBox">
                     <label for="data_lancamento"><b>Data de lançamento:</b></label>
-                    <input type="date" name="data_lancamento" id="data_lancamento" required>
+                    <input type="date" name="dataLancamento" id="dataLancamento" required>
                 </div><br><br>
                 <div class="inputBox">
                     <input type="text" name="duracao" class="inputUser" required>

@@ -5,7 +5,7 @@
     $titulo = $_POST['titulo'];
     $sinopse = $_POST['sinopse'];
     $genero = $_POST['genero'];
-    $data_lancamento = $_POST['data_lancamento'];
+    $dataLancamento = $_POST['dataLancamento'];
     $duracao = $_POST['duracao'];
 
     //fazendo o insert na tabela
