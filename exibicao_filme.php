@@ -6,8 +6,6 @@
         $sql = "select * from filme where titulo='$titulo';";
         $resultado = mysqli_query($conn, $sql);
         $elemento = mysqli_fetch_array($resultado);
-
-        echo $elemento['idFilme'];;
 ?>
 <!DOCTYPE html>
 <html>

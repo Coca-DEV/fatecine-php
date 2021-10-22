@@ -10,7 +10,7 @@
 
     //fazendo o insert na tabela
     $sql_filme = "insert into filme (titulo, sinopse, genero, data_lancamento, duracao) values ('$titulo',
-                    '$sinopse', '$genero', '$data_lancamento', '$duracao');"; 
+                    '$sinopse', '$genero', '$dataLancamento', '$duracao');"; 
 
     //executando o insert na tabela
     $resultado_filme = mysqli_query($conn, $sql_filme);
